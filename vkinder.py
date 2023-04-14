@@ -1,6 +1,5 @@
 import random
 from datetime import datetime
-from Data.ins_data import sel_prop_data
 import requests
 from token import GROUP_TOKEN, personal_token  # персональный токен
 
