@@ -4,7 +4,7 @@ from vk_api.keyboard import VkKeyboard, VkKeyboardColor
 from token import GROUP_TOKEN
 from vkinder import VKinder_get_info, VKinder_get_photo, get_user_param
 from vkinder import MessagesSend
-from Data.ins_data import ins_data, ins_fav_data, ins_propose_data, select_fav_client, sel_user_data
+from ins_data import ins_data, ins_fav_data, ins_propose_data, select_fav_client, sel_user_data
 
 vk_session = vk_api.VkApi(token=GROUP_TOKEN)
 start_keyboard = VkKeyboard(inline=True)
