@@ -1,6 +1,7 @@
 import random
 from datetime import datetime
 import requests
+from ins_data import sel_prop_data
 from token import GROUP_TOKEN, personal_token  # персональный токен
 
 access_token = personal_token
@@ -49,7 +50,7 @@ class VKinder_get_info:
                 for i in range(len(items)):
                     item = items[i]
                     if item['is_closed'] is False and item['can_write_private_message'] == 1 and item['has_photo'] == 1:
-                        if item['id'] not in # должна быть ссылка на функцию из бд(user_id):
+                        if item['id'] not in sel_prop_data(user_id):
                             result = item['first_name'], item['last_name'], item[
                                 'id'], f"https://vk.com/{item['screen_name']}"
                             coincidence.append(f"{user_id}-{item['id']}")
